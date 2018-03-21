@@ -2,18 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8d8a334-27f2-43f4-9b9c-5cd10b90e7ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/git_push_all_projects_in_pwd_LOG.txt" afterPath="$PROJECT_DIR$/git_push_all_projects_in_pwd_LOG.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/Crawler.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/Crawler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/FileOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/FileOperation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTML.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/HTML.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTMLParser.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/HTMLParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/JWindowsFrame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/ProxyIP.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/ProxyIP.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/ReParser.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/ReParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/Sina.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/Sina.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/SinaSSOEncoder.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/SinaSSOEncoder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiBoUser.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/WeiBoUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiboCrawler3.java" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/WeiboCrawler3.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/Crawler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/FileOperation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTML$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTML$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTML.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTMLParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$8$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$9$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/OpenFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/ProxyIP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/ReParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/Sina.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/SinaSSOEncoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiBoUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiboCrawler3$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiboCrawler3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiboCrawler3.class" afterPath="" />
     </list>
     <ignored path="WeiboCrawler2.2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,12 +49,12 @@
     <favorites_list name="WeiboCrawler2.2" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Crawler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/Crawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="125">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -68,8 +84,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2174" />
-    <option name="y" value="47" />
+    <option name="x" value="142" />
+    <option name="y" value="10" />
     <option name="width" value="1932" />
     <option name="height" value="1045" />
   </component>
@@ -98,7 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -130,10 +145,49 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeiboCrawler2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeiboCrawler2.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SinaWeiboCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WeiboCrawler2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -390,6 +444,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -627,6 +682,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -767,38 +828,39 @@
       <option name="presentableId" value="Default" />
       <updated>1521608035790</updated>
       <workItem from="1521608091827" duration="298000" />
+      <workItem from="1521608706032" duration="772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298000" />
+    <option name="totallyTimeSpent" value="1070000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2174" y="47" width="1932" height="1045" extended-state="0" />
-    <editor active="false" />
+    <frame x="142" y="10" width="1932" height="1045" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -819,8 +881,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/Crawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding />
         </state>
       </provider>
