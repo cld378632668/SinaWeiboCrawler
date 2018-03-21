@@ -1,4 +1,4 @@
-package cn.edu.Tsinghua.lxs.WeiboCrawler2;
+package cn.edu.xmu.cld.WeiboCrawler2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
