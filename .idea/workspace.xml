@@ -2,38 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8d8a334-27f2-43f4-9b9c-5cd10b90e7ee" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/Crawler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/FileOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTML$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTML$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTML.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/HTMLParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$8$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$9$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/JWindowsFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/OpenFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/ProxyIP.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/ReParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/Sina.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/SinaSSOEncoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiBoUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiboCrawler3$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiboCrawler3$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cn/edu/Tsinghua/lxs/WeiboCrawler2/useVersion2014/WeiboCrawler3.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WeiboCrawler2.2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +27,8 @@
       <file leaf-file-name="Crawler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/Crawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="250">
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -84,10 +58,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="10" />
-    <option name="width" value="1932" />
-    <option name="height" value="1045" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -122,73 +96,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeiboCrawler2.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SinaWeiboCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeiboCrawler2.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SinaWeiboCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeiboCrawler2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeiboCrawler2.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SinaWeiboCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeiboCrawler2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -828,16 +740,17 @@
       <option name="presentableId" value="Default" />
       <updated>1521608035790</updated>
       <workItem from="1521608091827" duration="298000" />
-      <workItem from="1521608706032" duration="772000" />
+      <workItem from="1521608706032" duration="1368000" />
+      <workItem from="1521644280192" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1070000" />
+    <option name="totallyTimeSpent" value="1710000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="142" y="10" width="1932" height="1045" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -849,7 +762,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -889,8 +802,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/Crawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding />
         </state>
       </provider>
