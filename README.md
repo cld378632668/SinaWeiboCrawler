@@ -17,7 +17,7 @@
         - 加密密码
         - 登录
         - 获得结果
-    - SinaSSOEncoder作为且仅作为Sina的依赖类
+    - SinaSSOEncoder处理单点登录密码加密的问题，作为且仅作为Sina的依赖类
 - 
 - 其他类文件说明
     - WeiboUser对新浪微博用户的基本信息进行面向对象的建模
