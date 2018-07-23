@@ -35,5 +35,19 @@
 - 打开并且存储一个网页的安全和不安全写法（java\python），另见我的轮子库。
     - https://blog.csdn.net/qq_35488769/article/details/72682016
 - 模拟登陆新浪微博HTTP抓包及分析
+    - https://segmentfault.com/a/1190000011234077
     - https://www.cnblogs.com/xyqhello/p/3622658.html
     - https://blog.csdn.net/erliang20088/article/details/45790185
+- 爬虫基础能力练习
+    - 网页解析练习：
+        - https://segmentfault.com/blog/pypc?page=2
+        - Python爬虫实战之（一）| 微信实时爬取电影咨询. https://segmentfault.com/a/1190000012734070
+        -  Python爬虫学习之（二）| urllib进阶篇
+        -  Python爬虫实战之（二）| 寻找你的招聘信息. https://segmentfault.com/a/1190000012837173
+        - Python爬虫实战之（三）| 一个海贼迷的呐喊
+        - *Python爬虫学习之（三）| 快速入门正则表达式. https://segmentfault.com/a/1190000012818298
+    - 模拟登陆练习：
+        - Python爬虫实战之（四）| 模拟登录京东商城
+        - Python爬虫实战之（五）| 模拟登录wechat
+
+-如有疑问请咨询：smartonexmu@126.com
