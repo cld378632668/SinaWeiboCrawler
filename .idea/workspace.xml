@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32713e25-dfe7-4836-8b20-fbe017187032" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeiboCrawler2.2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WeiboCrawler2.2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/ProxyIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/ProxyIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/ReParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/ReParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/Sina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/Sina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/WeiboCrawler3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/useVersion2014/WeiboCrawler3.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +56,7 @@
       <file leaf-file-name="FileOperation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/FileOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="152">
               <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -159,7 +148,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="350" />
     <option name="y" value="93" />
     <option name="width" value="1400" />
@@ -258,12 +247,12 @@
       <option name="presentableId" value="Default" />
       <updated>1532261863496</updated>
       <workItem from="1532261897595" duration="4759000" />
-      <workItem from="1532308034124" duration="3762000" />
+      <workItem from="1532308034124" duration="4062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8521000" />
+    <option name="totallyTimeSpent" value="8821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -278,14 +267,14 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32947975" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4909285" visible="true" weight="0.24427083" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48994252" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.11687088" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.6868979" />
       <window_info id="Learn" order="2" />
-      <window_info id="Structure" order="1" sideWeight="0.5090715" side_tool="true" visible="true" weight="0.24427083" />
+      <window_info id="Structure" order="1" sideWeight="0.51005745" side_tool="true" visible="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -467,7 +456,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/xmu/cld/WeiboCrawler2/FileOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="152">
           <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
