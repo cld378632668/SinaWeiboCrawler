@@ -45,6 +45,140 @@ import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
 
 public class WeiboCrawler3 {
+
+	public static void main(String[] args) throws ClientProtocolException,
+			URISyntaxException, IOException, InterruptedException {
+		Sina sina=new Sina();
+		long t1 = System.currentTimeMillis();
+
+		WeiboCrawler3 crawler = new WeiboCrawler3();
+		/*
+		  String[] searchwords = {
+				"汽车摇号","自贸区","雾霾%20PM2.5","医疗改革","土地改革","房价调控"
+				,"农村集体产权%20改革","东莞扫黄","油价","城镇化","国产航母","中石油腐败","养老制度"
+				,"嫣然基金","养老保险","拆迁","医患关系","计划生育%20超生","反腐%20纪委","城管"
+				,"土地流转权","发改委","证监会","余额宝","理财产品","环保","教育部"
+				,"高考","自主招生","股市%20A股","单独二胎%20单独二孩"
+				,"乌克兰局势","钓鱼岛争端","越南%20南海争端","菲律宾%20黄岩岛","叙利亚%20化学武器"
+				,"伊朗%20核问题%20危机","中期选举","埃及局势","泰国局势","朝韩冲突","南海识别区"
+				};
+		 */
+		String[] searchwords = {
+				"小米3"
+		};
+		String today = getMyTime();
+		File dirGetweiboSub = new File("d:/data/weibo/getweibo/"+today);
+		dirGetweiboSub.mkdirs();
+		File dirWeibostxtSub = new File("d:/data/weibo/saveweibo/weibostxt/"+today);
+		dirWeibostxtSub.mkdirs();
+		//File dirWeibosxmlSub = new File("d:/data/weibo/saveweibo/weibosxml/"+today);
+		//dirWeibosxmlSub.mkdirs();
+		for (int n = 0; n < searchwords.length; n++) {
+			String searchword = searchwords[n];
+			File f = new File("d:/data/weibo/getweibo/"+today+"/"+searchword);
+			f.mkdirs();//创建文件夹，另一方法mkdirs创建多层未创建的文件夹
+			//String html;
+			String saveWeibosTXTPath = "d:/data/weibo/saveweibo/weibostxt/"+today+"/"+searchword+".txt";
+			//String saveWeibosXMLPath = "d:/data/weibo/saveweibo/weibosxml/"+today+"/"+searchword+".xml";
+			int totalPage =2;//设置想要搜索的页数，则搜索范围为该搜索词下的第1到第totalPage页
+
+			System.out.println("****开始爬取 \""+searchword+"\" 关键字的微博****");
+			//将指定页数的搜索页面html文件爬取下来并保存
+			crawler.crawl(totalPage, today, searchword);
+			System.out.println("****爬取 \""+searchword+"\" 微博结果结束****");
+
+			Vector<String> oneHTMLWeibos = new Vector<String>();//一个html下的所有微博
+			Vector<String> allWeibos = new Vector<String>();//一个关键词搜索出来的所有微博
+			/**
+			 * 此循环从搜索页面html文件中得到微博，微博id，存入向量容器中
+			 */
+			for (int i = 1; i < totalPage+1; i++) {
+				String htmlPath = "d:/data/weibo/getweibo/"+today+"/"+searchword+"/"+searchword+String.valueOf(i)+".html";
+				File file = new File(htmlPath);
+
+				if(file.isFile()){//如果这个文件存在，就解析出微博来
+					String htmlString = crawler.htmltoString(htmlPath);
+					oneHTMLWeibos = crawler.getWeiboInfo(htmlString);
+				}
+				for (int j = 0; j < oneHTMLWeibos.size(); j++) {//存到总微博里
+					if(!allWeibos.contains(oneHTMLWeibos.get(j))){
+						allWeibos.add(oneHTMLWeibos.get(j));
+
+					}
+
+				}
+				System.out.println(allWeibos);
+			}
+			/**
+			 * 将结果写入文件
+			 */
+			crawler.writeVector(allWeibos, saveWeibosTXTPath);
+			//crawler.writeVector2xml(allWeibos, saveWeibosXMLPath);
+			Toolkit.getDefaultToolkit().beep();
+			Thread.sleep(500);
+			Toolkit.getDefaultToolkit().beep();//响两声表示爬取一个关键词结束
+		}
+		Toolkit.getDefaultToolkit().beep();
+		Thread.sleep(500);
+		Toolkit.getDefaultToolkit().beep();
+		Thread.sleep(500);
+		Toolkit.getDefaultToolkit().beep();//响三声提示一下爬取结束
+
+		long t2 = System.currentTimeMillis();
+		System.out.println((t2 - t1)/60000 + "分钟");
+	}
+
+
+	/**
+	 * 此函数调用底层函数，执行具体的爬取微博的过程
+	 * 并保存微博搜索结果页面html文件
+	 * @param totalPage
+	 * @param searchword
+	 * @throws ClientProtocolException
+	 * @throws URISyntaxException
+	 * @throws IOException
+	 * @throws InterruptedException
+	 */
+	public void crawl(int totalPage, String today, String searchword) throws ClientProtocolException, URISyntaxException, IOException, InterruptedException {
+		// TODO Auto-generated method stub
+		String html;
+		WeiboCrawler3 crawler = new WeiboCrawler3();
+		for(int i = totalPage; i > 0; i--){//开始爬取，先把一个话题下的html都爬下来，再用这些html文件
+			html = crawler.getHTML(
+					"http://s.weibo.com/weibo/"+searchword+"&nodup=1&page="+String.valueOf(i));
+			if(html != "html获取失败"){
+				if(crawler.isVerification(html)){
+					System.out.println("****十秒内请在弹出页面输入验证码，程序会自动重连****");
+					Toolkit.getDefaultToolkit().beep();//蜂鸣提示需要输入验证码
+					crawler.runBroswer("http://s.weibo.com/weibo");
+					Thread.sleep(10000);//你有十秒时间可以填入验证码
+					i++;
+				}
+				else if(crawler.isExistResult(html)){
+
+					crawler.writeString(html,
+							"d:/data/weibo/getweibo/"+today+"/"+searchword+"/"+searchword+String.valueOf(i)+".html");
+					System.out.println("获取第"+i+"页成功！");
+				}
+				else
+					System.out.println("第"+i+"页内容不存在");
+			}
+			else {//如果因为连接超时问题，获得的html为"html获取失败"的话，则再重新连接一次
+				i++;
+			}
+		}
+	}
+
+	public static String getMyTime(){
+
+		Date date = new Date(System.currentTimeMillis());
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+		String today = dateFormat.format(date);
+		System.out.println(today);
+
+		return today;
+	}
+
 	/**
 	 * 用默认浏览器打开指定网址
 	 * @param url
@@ -468,135 +602,7 @@ public class WeiboCrawler3 {
 		
 		return isExist;
 	}
-	/**
-	 * 此函数调用底层函数，执行具体的爬取微博的过程
-	 * 并保存微博搜索结果页面html文件
-	 * @param totalPage
-	 * @param searchword
-	 * @throws ClientProtocolException
-	 * @throws URISyntaxException
-	 * @throws IOException
-	 * @throws InterruptedException
-	 */
-	public void crawl(int totalPage, String today, String searchword) throws ClientProtocolException, URISyntaxException, IOException, InterruptedException {
-		// TODO Auto-generated method stub
-		String html;
-		WeiboCrawler3 crawler = new WeiboCrawler3();
-		for(int i = totalPage; i > 0; i--){//开始爬取，先把一个话题下的html都爬下来，再用这些html文件
-			html = crawler.getHTML(
-					"http://s.weibo.com/weibo/"+searchword+"&nodup=1&page="+String.valueOf(i));
-			if(html != "html获取失败"){
-				if(crawler.isVerification(html)){
-					System.out.println("****十秒内请在弹出页面输入验证码，程序会自动重连****");
-					Toolkit.getDefaultToolkit().beep();//蜂鸣提示需要输入验证码
-					crawler.runBroswer("http://s.weibo.com/weibo");
-					Thread.sleep(10000);//你有十秒时间可以填入验证码
-					i++;
-				}
-				else if(crawler.isExistResult(html)){
-					
-					crawler.writeString(html, 
-							"d:/data/weibo/getweibo/"+today+"/"+searchword+"/"+searchword+String.valueOf(i)+".html");
-					System.out.println("获取第"+i+"页成功！");
-				}
-				else 
-					System.out.println("第"+i+"页内容不存在");
-			}
-			else {//如果因为连接超时问题，获得的html为"html获取失败"的话，则再重新连接一次
-				i++;
-			}
-		}
-	}
-	
-	public static String getMyTime(){
-		
-		Date date = new Date(System.currentTimeMillis());
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-		String today = dateFormat.format(date);
-		System.out.println(today);
-		
-		return today;
-	}
-	
-	public static void main(String[] args) throws ClientProtocolException, 
-	URISyntaxException, IOException, InterruptedException {
-		Sina sina=new Sina();
-		long t1 = System.currentTimeMillis();
-		
-		WeiboCrawler3 crawler = new WeiboCrawler3();
-		/*
-		  String[] searchwords = {
-				"汽车摇号","自贸区","雾霾%20PM2.5","医疗改革","土地改革","房价调控"
-				,"农村集体产权%20改革","东莞扫黄","油价","城镇化","国产航母","中石油腐败","养老制度"
-				,"嫣然基金","养老保险","拆迁","医患关系","计划生育%20超生","反腐%20纪委","城管"
-				,"土地流转权","发改委","证监会","余额宝","理财产品","环保","教育部"
-				,"高考","自主招生","股市%20A股","单独二胎%20单独二孩"
-				,"乌克兰局势","钓鱼岛争端","越南%20南海争端","菲律宾%20黄岩岛","叙利亚%20化学武器"
-				,"伊朗%20核问题%20危机","中期选举","埃及局势","泰国局势","朝韩冲突","南海识别区"
-				};				
-		 */
-		String[] searchwords = {
-                 "小米3"
-				};
-		String today = getMyTime();
-		File dirGetweiboSub = new File("d:/data/weibo/getweibo/"+today);
-		dirGetweiboSub.mkdirs();
-		File dirWeibostxtSub = new File("d:/data/weibo/saveweibo/weibostxt/"+today);
-		dirWeibostxtSub.mkdirs();
-		//File dirWeibosxmlSub = new File("d:/data/weibo/saveweibo/weibosxml/"+today);
-		//dirWeibosxmlSub.mkdirs();
-		for (int n = 0; n < searchwords.length; n++) {
-			String searchword = searchwords[n];
-			File f = new File("d:/data/weibo/getweibo/"+today+"/"+searchword);
-			f.mkdirs();//创建文件夹，另一方法mkdirs创建多层未创建的文件夹
-			//String html;
-			String saveWeibosTXTPath = "d:/data/weibo/saveweibo/weibostxt/"+today+"/"+searchword+".txt";
-			//String saveWeibosXMLPath = "d:/data/weibo/saveweibo/weibosxml/"+today+"/"+searchword+".xml";
-			int totalPage =2;//设置想要搜索的页数，则搜索范围为该搜索词下的第1到第totalPage页
-			
-			System.out.println("****开始爬取 \""+searchword+"\" 关键字的微博****");
-			//将指定页数的搜索页面html文件爬取下来并保存
-            crawler.crawl(totalPage, today, searchword);
-			System.out.println("****爬取 \""+searchword+"\" 微博结果结束****");
 
-			Vector<String> oneHTMLWeibos = new Vector<String>();//一个html下的所有微博
-			Vector<String> allWeibos = new Vector<String>();//一个关键词搜索出来的所有微博
-			/**
-			 * 此循环从搜索页面html文件中得到微博，微博id，存入向量容器中
-			 */
-			for (int i = 1; i < totalPage+1; i++) {
-				String htmlPath = "d:/data/weibo/getweibo/"+today+"/"+searchword+"/"+searchword+String.valueOf(i)+".html";
-				File file = new File(htmlPath);				
-				
-				if(file.isFile()){//如果这个文件存在，就解析出微博来
-					String htmlString = crawler.htmltoString(htmlPath);
-					oneHTMLWeibos = crawler.getWeiboInfo(htmlString);
-				}
-				for (int j = 0; j < oneHTMLWeibos.size(); j++) {//存到总微博里
-					if(!allWeibos.contains(oneHTMLWeibos.get(j))){
-						allWeibos.add(oneHTMLWeibos.get(j));
-						
-					}
-					
-				}
-				System.out.println(allWeibos);
-			}
-			/**
-			 * 将结果写入文件
-			 */
-			crawler.writeVector(allWeibos, saveWeibosTXTPath);
-			//crawler.writeVector2xml(allWeibos, saveWeibosXMLPath);
-			Toolkit.getDefaultToolkit().beep();
-			Thread.sleep(500);
-			Toolkit.getDefaultToolkit().beep();//响两声表示爬取一个关键词结束
-		}
-		Toolkit.getDefaultToolkit().beep();
-		Thread.sleep(500);
-		Toolkit.getDefaultToolkit().beep();
-		Thread.sleep(500);
-		Toolkit.getDefaultToolkit().beep();//响三声提示一下爬取结束
-		
-		long t2 = System.currentTimeMillis();
-		System.out.println((t2 - t1)/60000 + "分钟");
-	}
+	
+
 }

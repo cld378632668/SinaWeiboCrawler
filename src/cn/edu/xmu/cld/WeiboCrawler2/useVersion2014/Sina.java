@@ -55,13 +55,13 @@ public class Sina {
 	
 	
 
-	public static WeiBoUser login(String u, String p ) {
+	public static WeiBoUser login(String username, String password ) {
 
 		WeiBoUser user = null;
         DefaultHttpClient client=new DefaultHttpClient();
 		try {
 			//获得rsaPubkey,rsakv,servertime等参数值
-			HashMap<String, String> params = preLogin(encodeAccount(u),client);
+			HashMap<String, String> params = preLogin(encodeAccount(username),client);
 			
 			
 			HttpPost post = new HttpPost(
@@ -98,7 +98,7 @@ public class Sina {
 			nvps.add(new BasicNameValuePair("servertime", params.get("servertime")));
 
 			nvps.add(new BasicNameValuePair("service", "miniblog"));
-			//nvps.add(new BasicNameValuePair("sp", new SinaSSOEncoder().encode(p, data, nonce)));
+			//nvps.add(new BasicNameValuePair("sp", new SinaSSOEncoder().encode(password, data, nonce)));
 			
 			
 			/******************** *加密密码 ***************************/
@@ -113,7 +113,7 @@ public class Sina {
 				// 调用preprocess方法，并传入两个参数密码和验证码
 
 				pass = invoke.invokeFunction("getpass",
-						p, params.get("servertime"), nonce,params.get("pubkey")).toString();
+						password, params.get("servertime"), nonce,params.get("pubkey")).toString();
 				
 				System.out.println("c = " + pass);
 			}
@@ -123,7 +123,7 @@ public class Sina {
 			
 			
 			nvps.add(new BasicNameValuePair("sp",pass));
-			nvps.add(new BasicNameValuePair("su", encodeAccount(u)));
+			nvps.add(new BasicNameValuePair("su", encodeAccount(username)));
 			nvps
 			.add(new BasicNameValuePair(
 					"url",
@@ -193,8 +193,8 @@ public class Sina {
 					}
 				}
 				user = new WeiBoUser();
-				user.setUserName(u);
-				user.setUserPass(p);
+				user.setUserName(username);
+				user.setUserPass(password);
 				user.setDisplayName(nick);
                 user.getCookieStore(client.getCookieStore());
 			}
@@ -227,7 +227,7 @@ public class Sina {
     }  
   
     /** 
-     * 新浪微博预登录，获取密码加密公钥 
+		 * 新浪微博预登录，获取密码加密公钥
      *  
      * @param unameBase64 
      * @return 返回从结果获取的参数的哈希表 

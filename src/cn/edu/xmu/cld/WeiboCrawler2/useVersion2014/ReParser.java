@@ -12,8 +12,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import cn.edu.Tsinghua.lxs.WeiboCrawler2.FileOperation;
-import cn.edu.Tsinghua.lxs.WeiboCrawler2.HTMLParser;
+import cn.edu.xmu.cld.WeiboCrawler2.FileOperation;
+import cn.edu.xmu.cld.WeiboCrawler2.HTMLParser;
 
 public class ReParser {
 	public String utf8Parser(String utf8){

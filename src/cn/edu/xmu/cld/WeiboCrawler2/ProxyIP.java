@@ -15,12 +15,14 @@ import org.jsoup.nodes.Element;
 
 public class ProxyIP {
 	/**
-	 * There are proxy ips which haven't been verified on the page like
+	 * 获取一个HTML页面中所有的IPs
+	 *
+	 * There are proxy ips which haven't been verified on the page like  ??
 	 * http://www.youdaili.cn/Daili/guonei/1843.html, use regex to match all
 	 * them out.
 	 * 
-	 * @param a
-	 *            saved String html file
+	 * @param html
+	 *              html code
 	 * @return a String Vector contains all the IP on the html file
 	 * @throws ClientProtocolException
 	 * @throws IOException
@@ -54,7 +56,7 @@ public class ProxyIP {
 	/**
 	 * Find all IP library links on the homepage of "http://www.xici.net.co/".
 	 * 
-	 * @param a
+	 * @param ipLibURL
 	 *            specified URL "http://www.youdaili.cn/"
 	 * @return a String Vector contains all URLs that contain some proxy IPs
 	 * @throws ClientProtocolException
@@ -90,7 +92,7 @@ public class ProxyIP {
 	/**
 	 * Get all unverified proxy IP in all IP library links.
 	 * 
-	 * @param a specified URL "http://www.youdaili.cn/"
+	 * @param ipLibURL specified URL "http://www.youdaili.cn/"
 	 * @return a String Vector contains all unverified IPs
 	 * @throws ClientProtocolException
 	 * @throws IOException
@@ -165,8 +167,7 @@ public class ProxyIP {
 	/**
 	 * Test all proxy IPs and select the valid ones.
 	 * 
-	 * @param a
-	 *            String Vector which contains all proxy IPs
+	 * @param a String Vector which contains all proxy IPs
 	 * @return a String Vector which contains all valid IPs selected from all
 	 *         candidate proxy IPs
 	 * @throws ClientProtocolException
@@ -253,33 +254,30 @@ public class ProxyIP {
 	}
 
 	/**
-	 * Verify all valid IPs then save the "plain" IPs.
+	 *
+	 * 过滤出能用于连接特定网址的proxyIps
 	 * 
-	 * @param validIPs
+	 * @param IPs
 	 *            - the Vector<String> contains all valid IPs
-	 * @param plainPath
-	 *            - a String giving a path to save all "plain" IPs. "plain" IP
-	 *            indicate if it is used as a proxy IP to connect a weibo search
-	 *            page, the weibo sentence can be read directly in the response
-	 *            HTML in a 2012 version but not enclosed as UTF8/GB2312/GBK
-	 *            charset format in 2014 version. I still do not know why it
-	 *            returns two versions HTML by different IPs. (2014/3/22)
+	 * @param outfilePath
+	 *
+	 *
 	 * @return
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public Vector<String> classifyIPs(Vector<String> validIPs,
-			String plainPath, JTextArea JTARunInfo)
+	public Vector<String> filterIPsSupportSpeWebsite(Vector<String> IPs, String specifyUrl
+												String outfilePath, JTextArea JTARunInfo)
 			throws ClientProtocolException, IOException {
 		final String verificationURL = "http://s.weibo.com/weibo/李雪山hakka&nodup=1&page=1";
 		// Vector<String> utf8IPs = new Vector<String>();
 		Vector<String> plainIPs = new Vector<String>();
 		String ip;
 		
-		for (int i = 0; i < validIPs.size(); i++) {
+		for (int i = 0; i < IPs.size(); i++) {
 			System.out.println("****开始验证第"+(i+1)+"个validIP");
 			JTARunInfo.append("****开始验证第 "+(i+1)+" 个validIP"+"\r\n");
-			ip = validIPs.get(i);
+			ip = IPs.get(i);
 			String html = new HTML().getHTMLbyProxy(verificationURL,
 					ip.split(":")[0], Integer.parseInt(ip.split(":")[1]), JTARunInfo);
 			int iReconn = 0;
@@ -323,33 +321,46 @@ public class ProxyIP {
 		return plainIPs;
 	}
 
+	/**
+	 * excute()是类的主函数，主要逻辑：
+	 * allIPs = getAllProxyIPs(ipLibURL) 从代理ip网站首页网址获取所有代理IP
+	 * validIPs = getValidProxyIPs(allIPs） 从所有代理IP中获取有效代理Ip
+	 * iPsSupportedWeibo = new ProxyIP()
+	 * 				.filterIPsSupportSpeWebsite(validIPs, plainIPsPath, weiboUrl); //过滤所有支持微博的代理IP
+	 *
+	 * @param args
+	 * @param JTARunInfo
+	 * @throws ClientProtocolException
+	 * @throws IOException
+	 * @throws URISyntaxException
+	 */
 	public void excute(String[] args, JTextArea JTARunInfo)
 			throws ClientProtocolException, IOException, URISyntaxException {
 		long t1 = System.currentTimeMillis();
 		// args[0] = savePlainIPs + "allIPs.txt";
 		// args[1] = savePlainIPs + "validIPs.txt";
-		// args[2] = savePlainIPs + "plainIPs.txt";
+		// args[2] = savePlainIPs + "iPsSupportedWeibo.txt";
 		String allIPsPath = args[0];
 		String validIPsPath = args[1];
 		String plainIPsPath = args[2];
-		String ipLibURL = "http://www.xici.net.co/";
+		String ipLibURL = "http://www.xici.net.co/"; //此网站已失效，该网站未失效
 		JTARunInfo.append("代理IP源为：http://www.xici.net.co/，感谢此网站的资源！"+"\r\n");
 		Vector<String> validIPs = new Vector<String>();
 		Vector<String> allIPs = new Vector<String>();
-		Vector<String> plainIPs = new Vector<String>();
+		Vector<String> iPsSupportedWeibo = new Vector<String>();
 		allIPs = getAllProxyIPs(ipLibURL, JTARunInfo);
 		FileOperation.write2txt(allIPs, allIPsPath);
 		validIPs = getValidProxyIPs(allIPs, JTARunInfo);
 		FileOperation.write2txt(validIPs, validIPsPath);
-		plainIPs = new ProxyIP()
-				.classifyIPs(validIPs, plainIPsPath, JTARunInfo);
+		iPsSupportedWeibo = new ProxyIP()
+				.filterIPsSupportSpeWebsite(validIPs, plainIPsPath, JTARunInfo);
 		
-		int plainIPsNum = plainIPs.size();
+		int plainIPsNum = iPsSupportedWeibo.size();
 		JTARunInfo.append("最终得到 "+plainIPsNum+ "个plainIP，如下："+"\r\n");
-		for(int i = 0; i < plainIPs.size(); i++){
-			JTARunInfo.append(plainIPs.get(i)+"\r\n");
+		for(int i = 0; i < iPsSupportedWeibo.size(); i++){
+			JTARunInfo.append(iPsSupportedWeibo.get(i)+"\r\n");
 		}
-		FileOperation.write2txt(plainIPs, plainIPsPath);
+		FileOperation.write2txt(iPsSupportedWeibo, plainIPsPath);
 		long t2 = System.currentTimeMillis();
 		System.out.println("获取可用IP耗时" + (double) (t2 - t1) / 60000 + "分钟");
 		JTARunInfo.append("获取可用IP耗时" + (double) (t2 - t1) / 60000 + "分钟"
